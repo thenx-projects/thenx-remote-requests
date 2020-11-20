@@ -9,11 +9,11 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+allprojects {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 }
 
-test {
-    useJUnitPlatform()
+dependencies {
 }
